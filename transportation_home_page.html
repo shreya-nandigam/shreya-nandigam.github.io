@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+body
+{
+padding: 50px;
+background-image: url("transportation_home_page_bg.jpg");
+background-size: 1530px 1000px;
+}
+
+.container {
+  position: relative;
+  max-width: 3000px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.8); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: 3s ease;
+  opacity:0;
+  color: white;
+  font-size: 90px;
+  padding: 50px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1; 
+}
+
+img:hover {
+  animation: shake 2s;
+  animation-iteration-count: infinite;
+  box-shadow: 0 20px 40px white;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<center>
+    <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 80px; color: white;">ADVANCEMENTS IN TRANSPORTATION TECHNOLOGIES</h1>
+</center>
+
+<div class="container">
+  <h1 id="1"></h1>
+  <a href="hyperloopmainpage.html"><img src="tpic1.jpg" alt="Avatar" class="image"></a>
+  <div class="overlay">HYPERLOOPS:  </div>
+</div>
+<br><br><hr><br><br>
+<div class="container">
+  <h1 id="2"></h1>
+    <a href="selfdrivingcarsmainpage.html"><img src="tpic2.jpg" alt="Avatar" class="image"></a>
+  <div class="overlay">SELF DRIVING CARS:  </div>
+</div>
+<br><br><hr><br><br>
+<div class="container">
+  <h1 id="3"></h1>
+    <a href="flyingtaximainpage.html"><img src="tpic3.jpg" alt="Avatar" class="image"></a>
+    <div class="overlay">FLYING TAXIS: </div>
+</div>
+<br><br><hr><br><br>
+<div class="container">
+  <h1 id="4"></h1>
+    <a href="watertransportationmainpage.html"><img src="tpic4.jpg" alt="Avatar" class="image"></a>
+    <div class="overlay">WATER TRANSPORTATION:  </div>
+</div>
+
+</body>
+</html>
