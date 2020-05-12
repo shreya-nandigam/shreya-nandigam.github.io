@@ -11,7 +11,7 @@
                       }
             .parallax2{
                       background-image: url(edit.jpg);
-                      height:400px;
+                      height:600px;
                       background-attachment: fixed;
                       background-repeat: no-repeat;
                       background-size: cover;}
@@ -68,8 +68,92 @@
             .dropdown-content a:hover {background-color: transparent}
             .dropdown:hover .dropdown-content {display: block;}
             .dropdown:hover .dropbtn {background-color: transparent;}
-                                                     
-        </style>
+            #container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 0 150px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.button {
+  display: inline-flex;
+  height: 40px;
+  width: 150px;
+  border: 2px solid #BFC0C0;
+  margin: 20px 20px 20px 20px;
+  color: #BFC0C0;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+a {
+  color: #BFC0C0;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+#button-5 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#button-5 a {
+  position: relative;
+  transition: all .45s ease-Out;
+}
+
+#translate {
+  transform: rotate(50deg);
+  width: 100%;
+  height: 250%;
+  left: -200px;
+  top: -30px;
+  background: #BFC0C0;
+  position: absolute;
+  transition: all .3s ease-Out;
+}
+
+#button-5:hover #translate {
+  left: 0;
+}
+
+#button-5:hover a {
+  color: #2D3142;
+}
+.line-1{
+    
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 22em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+</style>
      
         
         
@@ -105,9 +189,15 @@
            </div>
              
            
-        <div class="parallax2" style="color:snow;font-size: 30px;padding-left: 30px;padding-top: 250px;">
+        <div class="parallax2" style="color:snow;font-size: 30px;">
            
-        Replace the fear of the unknown with curiosity!
+            <p  class=" line-1 anim-typewriter">Replace The Fear Of The Unknown With Curiosity !</p>
+        <br><br><br><br><br><br><br><br><br><br>
+        
+        <center><div  class="button" id="button-5">
+            <div id="translate"></div>
+            <a href="signup and login.html">LOG IN</a>
+          </div></center>
         
         </div>
         <div class="parallax3" style="font-size:50px;color:white;text-align: center;padding-top: 50px;">
