@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+    <head>
+        <title>Login and Registration Form</title>
+        <link rel="stylesheet" type="text/css" href="css/fornt.css" />
+        <link rel="stylesheet" type="text/css" href="css/table.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
+    </head>
+    <body>
+            <div class="cd">
+                <header>
+                    <h1>WELCOME TO OUR <span>JOURNAL</span></h1>
+                </header>
+            <section>				
+                <div id="cond" >
+                    <a class="hid" id="toregister"></a>
+                    <a class="hid" id="tologin"></a>
+                    <div id="log">
+                        <div id="login" class="animate form">
+                            <form onsubmit="myfunction()"> 
+                                <h1>Log in</h1> 
+                                <p> 
+                                    <label for="username" class="uname" data-icon="u" > Your email or username </label>
+                                    <input id="username" name="username" required="required" type="text" placeholder="USERNAME or MAIL@gmail.com"/>
+                                </p>
+                                <p> 
+                                    <label for="password" class="youpasswd" data-icon="p"> Your password </label>
+                                    <input id="password" name="password" required="required" type="password" placeholder="eg. LEMON2002" />
+                                </p>
+                                <p class="keeplogin"> 
+									<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+									<label for="loginkeeping">Keep me logged in</label>
+								</p>
+                                <p class="login button"> 
+                                    <input type="button" onclick="check(this.form)" value="Login" /> 
+								</p>
+                                <p class="change_link">
+									Not a member yet ?
+									<a href="#toregister" class="to_register">Join us</a>
+                                </p>
+                                <script language="javascript">
+                                    function check(form)
+                                    {
+                                     if(form.username.value == "GOKUL" && form.password.value == "GOKUL212")
+                                      {
+                                        window.open('draft.html',"_self");
+                                        document.getElementById(compiler).style.display="block";
+                                      }
+                                     else
+                                     {
+                                       alert("Error Password or Username")
+                                      }
+                                    }
+                                </script>
+                            </form>
+                            
+                        </div>
+                        
+
+                        <div id="register" class="animate form">
+                            <form  onsubmit="myfunction()"> 
+                                <h1> Sign up </h1> 
+                                <p> 
+                                    <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
+                                    <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="USERNAME" />
+                                </p>
+                                <p> 
+                                    <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
+                                    <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="MAIL@gmail.com"/> 
+                                </p>
+                                <p> 
+                                    <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
+                                    <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. LEMON2002"/>
+                                </p>
+                                <p> 
+                                    <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
+                                    <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. LEMON2002"/>
+                                </p>
+                                <p class="signin button"> 
+									<input type="button" onclick="sign(this.form)" value="Sign up"/> 
+								</p>
+                                <p class="change_link">  
+									Already a member ?
+									<a href="#tologin" class="to_register"> Go and log in </a>
+                                </p>
+                                <script language="javascript">
+                                    function sign(form)
+                                    {
+                                        var us,em,pass;
+                                        us=form.usernamesignup.value;
+                                        em=form.emailsignup.value;
+                                     if(form.passwordsignup.value == form.passwordsignup_confirm.value)
+                                      {
+                                          pass=form.passwordsignup.value;
+                                          window.open('draft.html',"_self");
+                                        document.getElementById(compiler).style.display="block";
+                                          
+                                      }
+                                     else
+                                     {
+                                       alert("PASSWORD DOES NOT MATCH")
+                                      }
+                                    }
+                                </script>
+                            </form>
+                        </div>
+						
+                    </div>
+                </div>  
+            </section>
+        </div>
+    </body>
+</html>
