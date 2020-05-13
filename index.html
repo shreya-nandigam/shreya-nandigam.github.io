@@ -3,12 +3,13 @@
     <head>
         <title>THE JOURNAL</title>
         <style>
-            .parallax1{ background-image: url(pic1.jpg);
-                      height:600px;
-                      background-attachment: fixed;
-                      background-repeat: no-repeat;
-                      background-size: cover;
-                      }
+            #myVideo {
+                      right: 0;
+                      bottom: 0;
+                      min-width: 100%;
+                      height: 600px;
+                      background-size: cover;}
+                                             
             .parallax2{
                       background-image: url(edit.jpg);
                       height:600px;
@@ -184,9 +185,9 @@ a {
         </div>
 
         
-         <div class="parallax1" style="color:ghostwhite;font-size: 20mm;padding-left: 20px;padding-top: 30px;" >THE JOURNAL
-             
-           </div>
+        <div><video autoplay muted  id="myVideo" >
+          <source src="home.mp4" type="video/mp4" >
+        </video> </div>
              
            
         <div class="parallax2" style="color:snow;font-size: 30px;">
