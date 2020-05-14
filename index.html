@@ -2,6 +2,20 @@
 <html>
     <head>
         <title>THE JOURNAL</title>
+        <script type="text/javascript">
+          var seconds=0;
+          function st(){
+              window.setInterval("ut()",1000);
+          }
+          function ut(){
+              seconds++;
+              soFar.innerText=seconds;
+              if(seconds == 15)
+                {
+                  alert("LOGIN TO CONTINUE....")
+                }
+          }
+          </script>
         <style>
             #myVideo {
                       right: 0;
@@ -139,17 +153,81 @@ a {
   to{border-right-color: transparent;}
 }
 </style>
+<script type="text/javascript">
+  function check(form)
+  {
+       var c=form.search.value;
+       switch(c)
+      {
+          case "medicine":
+              window.open('Medicine.html',"_self");
+             document.getElementById(compiler).style.display="block";                
+          break;
+
+          case "transportation":
+          window.open('transportation_home_page.html',"_self");
+             document.getElementById(compiler).style.display="block";
+          break;
+
+          case "space":
+          window.open('space exploration.html',"_self");
+             document.getElementById(compiler).style.display="block";
+          break;
+
+          case "climate":
+          window.open('1main.html',"_self");
+             document.getElementById(compiler).style.display="block";
+          break;
+
+          default :
+          alert("SORRY WE COULD NOT FIND")
+      }
+      
+  }
+</script>
+<style>
+            
+  form.search input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 60%;
+    background: #f1f1f1;
+  }
+  
+  form.search input[type=button] {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.search input[type=button]:hover {
+    background: #0b7dda;
+  }
+  
+  form.search::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  </style>
       
     </head>
-    <body  style="background-color: black;">     
+    <body  style="background-color: black;" onload="st()">     
        
            
-       
+      
   
       <div class="icons" style="float: right; position:sticky;top: 0cm;">
         <button style="position: sticky;top: 0cm;"class="dropbtn" ><a href="#"><img  src="top.png" height="30mm" width="40mm"  ></a></button>
     </div>
-      
 
         <div class="icons" style="float: right; position:sticky;top: 0cm;">
             <button style="position: sticky;top: 0cm;"class="dropbtn" ><a href="https://www.instagram.com/"><img  src="insta.png" height="30mm" width="40mm"  ></a></button>
@@ -162,6 +240,13 @@ a {
         <div class="icons" style="float: right; position: sticky; top: 0cm;">
         <button style="position: sticky;top: 0cm;"class="dropbtn" ><a href="https://www.facebook.com/"><img  src="facebook.png" height="30mm" width="40mm"  ></a></button> 
         </div>
+        <div class="icons" style="float: right; position: sticky; top: 0cm;padding-top:0.3cm;">
+        <form class="search" style="margin:auto;max-width:300px" align="right">
+          <input type="text" name="search">
+        <input type="button" onclick="check(this.form)" value="SEARCH" />
+        </form>
+        </div>
+        <h6 id="soFar">0</h6>
 
         
         <div><video autoplay muted  id="myVideo" >
