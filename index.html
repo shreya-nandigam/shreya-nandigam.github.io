@@ -155,14 +155,25 @@ a {
   to{border-right-color: transparent;}
 }
 </style>
-     
-        
-        
+<script type="text/javascript">
+  var seconds=0;
+  function st(){
+      window.setInterval("ut()",1000);
+  }
+  function ut(){
+      seconds++;
+      soFar.innerText=seconds;
+      if(seconds == 15)
+        {
+          alert("Login to join us!")
+        }
+  }
+  </script>      
     </head>
-    <body style="background-color: black;">
+    <body onload="st()" style="background-color: black;">
         
        
-            
+           
         <div class="dropdown" style="float: right;position: sticky;top: 0cm;">
             <button style="position: sticky;top: 0cm;"class="dropbtn" ><img  src="option_menu.png" height="30mm" width="40mm"  ></button>
             <div class="dropdown-content">
@@ -171,6 +182,7 @@ a {
                 <a href="#">Contact Us</a>
               </div>
         </div>
+	<h6 id="soFar"></h6>
 
         <div class="icons" style="float: right; position:sticky;top: 0cm;">
             <button style="position: sticky;top: 0cm;"class="dropbtn" ><a href="https://www.instagram.com/"><img  src="insta.png" height="30mm" width="40mm"  ></a></button>
